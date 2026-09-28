@@ -1,0 +1,15 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Streamlit secrets (never commit)
+.streamlit/secrets.toml
+
+# Environment and editor files
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

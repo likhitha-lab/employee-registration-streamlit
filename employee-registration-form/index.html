@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <form id="registrationForm" class="card" novalidate>
+      <div class="card__banner" aria-hidden="true"></div>
+      <div class="card__body">
+        <h1 class="title">Employee Registration Form</h1>
+        <p class="description">Complete the fields below, then double-click the review section to continue.</p>
+
+        <div class="question">
+          <label for="fullName" class="question__label">1. Full Name</label>
+          <input type="text" id="fullName" name="fullName" class="input"
+                 data-testid="full-name" autocomplete="name" placeholder="Enter your answer">
+        </div>
+
+        <div class="question">
+          <label for="workEmail" class="question__label">2. Work Email</label>
+          <input type="email" id="workEmail" name="workEmail" class="input"
+                 data-testid="work-email" autocomplete="email" placeholder="name@company.com">
+        </div>
+
+        <div class="question">
+          <label for="department" class="question__label">3. Department</label>
+          <select id="department" name="department" class="input select" data-testid="department">
+            <option value="">Select your answer</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+            <option value="HR">HR</option>
+          </select>
+        </div>
+
+        <div id="reviewSection" class="review" data-testid="review-section"
+             tabindex="0" role="button"
+             aria-expanded="false" aria-controls="additionalDetails"
+             aria-labelledby="reviewHeading" aria-describedby="reviewHint">
+          <h2 id="reviewHeading" class="review__heading">Review your information</h2>
+          <p id="reviewHint" class="review__hint">Double-click this section to continue. Keyboard: press Enter or Space.</p>
+        </div>
+
+        <p id="reviewSuccess" class="message message--success"
+           data-testid="review-success" role="status" hidden>Review section opened successfully.</p>
+
+        <div id="additionalDetails" class="details" hidden>
+          <h2 class="details__heading">Additional Details</h2>
+
+          <div class="question">
+            <label for="location" class="question__label">4. Location</label>
+            <input type="text" id="location" name="location" class="input" placeholder="Enter your answer">
+          </div>
+
+          <div class="question">
+            <label for="comments" class="question__label">5. Comments</label>
+            <textarea id="comments" name="comments" class="input textarea" rows="4"
+                      placeholder="Enter your answer"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" id="submitButton" class="button" data-testid="submit-button" disabled>Submit</button>
+
+        <p id="submitSuccess" class="message message--success"
+           data-testid="submit-success" role="status" hidden>Form submitted successfully.</p>
+      </div>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

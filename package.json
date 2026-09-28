@@ -1,0 +1,18 @@
+{
+  "name": "forms-doubleclick-poc",
+  "version": "1.0.0",
+  "description": "Form Interaction Test: proof of concept for detecting a double-click on a form section and forwarding it to a future Microsoft Copilot Studio agent.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "license": "UNLICENSED"
+}

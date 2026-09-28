@@ -1,0 +1,12 @@
+# Streamlit configuration. Committed to Git and used by Streamlit Community Cloud.
+
+[theme]
+# The custom CSS in app.py draws a white form card on a light background.
+# Force the light base theme so text stays readable when a viewer's OS is in dark mode.
+base = "light"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
